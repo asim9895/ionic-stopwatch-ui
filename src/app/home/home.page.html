@@ -1,20 +1,40 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+  <div class="heading">
+    <h1 class="first-heading">Stop<span class="second-heading">watch</span></h1>
   </div>
+
+  <div class="time-picker">
+    <ion-item class="item-color">
+      <ion-label>Rest Duration</ion-label>
+      <ion-datetime
+        placeholder="Tap Here"
+        display-format="mm:ss"
+        [(ngModel)]="fullTime"
+      ></ion-datetime>
+    </ion-item>
+  </div>
+
+  <div class="items">
+    <circle-progress
+      (click)="startTime()"
+      [percent]="percent"
+      [radius]="radius"
+      [outerStrokeWidth]="16"
+      [showZeroOuterStroke]="false"
+      [outerStrokeColor]="'#8000FF'"
+      [backgroundStroke]="'#33003F'"
+      [animation]="true"
+      [animationDuration]="300"
+      [backgroundStrokeWidth]="3"
+      [outerStrokeGradientStopColor]="'#FF00CB'"
+      [outerStrokeGradient]="true"
+      [showInnerStroke]="false"
+    ></circle-progress>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="center" size="30">
+    <ion-fab-button>
+      <ion-icon name="time-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 </ion-content>

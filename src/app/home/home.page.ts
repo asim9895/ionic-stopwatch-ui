@@ -6,7 +6,11 @@ import { Component } from '@angular/core';
   styleUrls: ['home.page.scss'],
 })
 export class HomePage {
+  fullTime: any = '00:01:30';
+  percent: number = 50;
+  radius: number = 100;
 
   constructor() {}
 
+  startTime() {}
 }
